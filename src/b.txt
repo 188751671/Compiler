@@ -1,0 +1,49 @@
+ start
+    integer num, sum;
+    character ch;
+    sum <- 0;
+    num <- 1;
+    ch <- "a";
+    loopif ch .lt. "z"
+    do
+        if (num .div. 3) .ne. 0 .and. (ch .ne. "y")
+        then
+            sum <- sum .plus. num .mul. 2;
+            ch <- ch .plus. 1;
+        else
+            sum <- sum .minus. num;
+            ch <- "m";
+        endif;
+        num <- num .plus. 1;
+    endloop;
+    print sum;
+    print ch;
+ finish
+
+
+1. start finish 替换成 start标签
+2.
+<start>
+    <integer>
+        <identifier> num </identifier>
+        <comma> , </comma>
+        <identifier> sum </identifier>
+        <end> ; </end>
+    </integer>
+
+
+</start>
+
+  <whileloop type = "493">
+  <condition>Vaneet</>
+  <assignment>Gupta</lastname>
+  <nickname>vinni</nickname>
+  <marks>95</marks>
+  </student>
+
+  <cars>
+     <supercars company = "Ferrari">
+        <carname type = "formula one">Ferrari 101</carname>
+        <carname type = "sports">Ferrari 202</carname>
+     </supercars>
+  </cars>

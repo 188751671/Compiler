@@ -60,14 +60,11 @@ public class Parser {
     public void parse() throws IOException, ParserConfigurationException {
         strings = tokenizer.Tokenize();
 
-        // Write XML doc
-        DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-        DocumentBuilder builder = factory.newDocumentBuilder();
-        Document doc = builder.newDocument();
-
         // compile every word
         if (compile() == false){
             System.out.println("Error");
+        }else {
+            System.out.println("OK");
         }
     }
 

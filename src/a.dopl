@@ -1,21 +1,3 @@
- start
-    integer num, sum;
-    character ch;
-    sum <- 0;
-    num <- 1;
-    ch <- "a";
-    loopif ch .lt. "z"
-    do
-        if (num .div. 3) .ne. 0 .and. (ch .ne. "y")
-        then
-            sum <- sum .plus. num .mul. 2;
-            ch <- ch .plus. 1;
-        else
-            sum <- sum .minus. num;
-            ch <- "m";
-        endif;
-        num <- num .plus. 1;
-    endloop;
-    print sum;
-    print ch;
- finish
+start
+character xy , yz;
+finish

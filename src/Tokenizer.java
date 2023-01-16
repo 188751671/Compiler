@@ -1,5 +1,7 @@
 import java.io.*;
 import java.nio.charset.StandardCharsets;
+import java.util.LinkedList;
+import java.util.List;
 
 
 public class Tokenizer {
@@ -10,11 +12,17 @@ public class Tokenizer {
     }
 
     public String[] Tokenize() throws IOException {
-
         String bb = new String(fi.readAllBytes(), StandardCharsets.UTF_8);
 
-        String[] ss = bb.split("\s+");
-        //System.out.println(ss.length);
+
+        LinkedList<String> temp = new LinkedList<>();
+        String[] temp1 = bb.split("\n");
+        for (int i = 0; i < temp1.length; i++) {
+            String[] temp2 = temp1[i].split("\s+");
+            temp.addAll(List.of(temp2));
+        }
+        String[] ss = temp.toArray(String[]::new);
+
 
         String[] newArray = new String[ss.length*2];
         int newArrayIndex = 0;
